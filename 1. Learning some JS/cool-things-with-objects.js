@@ -48,8 +48,15 @@ var car = {
     name: 'Swift',
     regNum: 'KA 3CB 2299',
     owner: 'John Doe',
+    isRunning: false,
     blowHorn: function () {
         console.log('honk honk');
+    },
+    start: function () {
+        return this.isRunning;
+    },
+    setNewOwner: function (owner) {
+        this.owner = owner;
     }
 };
 
