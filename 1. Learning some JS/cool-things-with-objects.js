@@ -42,3 +42,15 @@ function printValues(propName) {
     console.log(person[propName]);
 }
 arryOfProperties.forEach(printValues);
+
+// methods in objects
+var car = {
+    name: 'Swift',
+    regNum: 'KA 3CB 2299',
+    owner: 'John Doe',
+    blowHorn: function () {
+        console.log('honk honk');
+    }
+};
+
+car.blowHorn();
