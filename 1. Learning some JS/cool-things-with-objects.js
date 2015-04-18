@@ -48,11 +48,11 @@ var car = {
     name: 'Swift',
     regNum: 'KA 3CB 2299',
     owner: 'John Doe',
-    isRunning: false,
+    isRunning: true,
     blowHorn: function () {
         console.log('honk honk');
     },
-    start: function () {
+    isCarRunning: function () {
         return this.isRunning;
     },
     setNewOwner: function (owner) {
@@ -61,3 +61,13 @@ var car = {
 };
 
 car.blowHorn();
+
+// try the other methods
+
+// You can add and delete properties at runtime from objects
+car.driver = "Jane Doe";
+
+// you can even add methods at runtime
+car.stop = function () {
+    this.isRunning = false;
+};
