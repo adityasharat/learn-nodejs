@@ -15,5 +15,12 @@ console.log(person.name + ', ' + person.location + '\n');
 
 // when to use [] notation to refer to properties
 console.log(person['profile id'] + '\n');
+
+// You can also access properties by using a string value that is stored in a variable:
 var propName = 'designation';
 console.log(person[propName] + '\n');
+
+// Enumerating all properties of an object
+var arryOfProperties = Object.keys(person);
+
+// How would you print the value of all the properties in a object?
