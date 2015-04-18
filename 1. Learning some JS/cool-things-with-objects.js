@@ -6,6 +6,10 @@ var person = {
     'profile id': 245
 };
 
+// creatig empty objects
+// var obj = new Object();
+// var obj = {}; // better
+
 // print the object
 console.log(person);
 console.log('\n');
