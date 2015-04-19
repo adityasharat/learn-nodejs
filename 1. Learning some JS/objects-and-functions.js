@@ -77,11 +77,12 @@ var car = {
 };
 
 car.blowHorn();
+console.log('\n');
 
 // try the other methods
 
 // You can add and delete properties at runtime from objects
-car.driver = "Jane Doe";
+car.driver = 'Jane Doe';
 delete car.driver;
 
 // you can even add methods at runtime
@@ -94,7 +95,29 @@ car.stop = function () {
 // ideally all cars will have these methods
 // using inheritance
 
-var car = {};
+var car = {
+    blowHorn: function () {
+        console.log(this.hornSound);
+    },
+    isCarRunning: function () {
+        return this.isRunning;
+    },
+    setNewOwner: function (owner) {
+        this.owner = owner;
+    }
+};
+
+
+var swiftCar = Object.create(car);
+
+swiftCar.name = 'swift';
+swiftCar.owner = 'someone';
+swiftCar.hornSound = 'no sound';
+
+swiftCar.blowHorn();
+
+
+/*var car = {};
 car.prototype.blowHorn = function blowHorn() {
     console.log(this.hornSound);
 };
@@ -104,4 +127,4 @@ car.prototype.blowHorn.isCarRunning = function isCarRunning() {
 };
 car.prototype.blowHorn.setNewOwner = function setNewOwner(owner) {
     this.owner = owner;
-};
+};*/
