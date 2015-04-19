@@ -135,7 +135,17 @@ swiftCar.blowHorn();
 /* --------------------------------------------------------------------------------- */
 console.log(lineBreak);
 
-/*var car = {};
+// inheritance
+
+// there are no classes in JS you can use contructor function to create objects
+function Car(name, owner, regNum, hornSound) {
+    this.name = name;
+    this.regNum = regNum;
+    this.owner = owner;
+    this.hornSound = hornSound;
+}
+
+// for method we use the prototype
 car.prototype.blowHorn = function blowHorn() {
     console.log(this.hornSound);
 };
@@ -145,4 +155,4 @@ car.prototype.blowHorn.isCarRunning = function isCarRunning() {
 };
 car.prototype.blowHorn.setNewOwner = function setNewOwner(owner) {
     this.owner = owner;
-};*/
+};
