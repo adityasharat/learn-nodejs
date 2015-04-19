@@ -1,4 +1,9 @@
 // Object
+
+// creatig empty objects
+// var obj = new Object();
+// var obj = {}; // better
+
 var person = {
     name: 'John Doe',
     designation: 'SDE I',
@@ -10,10 +15,6 @@ var person = {
 function add(x, y) {
     return x + y;
 }
-
-// creatig empty objects
-// var obj = new Object();
-// var obj = {}; // better
 
 // print the object
 console.log(person);
