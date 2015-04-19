@@ -49,6 +49,8 @@ function printValues(propName) {
 }
 arrayOfProperties.forEach(printValues);
 
+// do not use the for..in loop, explained later
+
 console.log('\n');
 
 // methods in objects
@@ -79,4 +81,25 @@ delete car.driver;
 // you can even add methods at runtime
 car.stop = function () {
     this.isRunning = false;
+};
+
+// this refers to the object itself
+
+// ideally all cars will have these methods
+// using inheritance
+
+var car = {
+    name: 'Swift',
+    regNum: 'KA 3CB 2299',
+    owner: 'John Doe',
+    isRunning: true,
+    blowHorn: function () {
+        console.log('honk honk');
+    },
+    isCarRunning: function () {
+        return this.isRunning;
+    },
+    setNewOwner: function (owner) {
+        this.owner = owner;
+    }
 };
