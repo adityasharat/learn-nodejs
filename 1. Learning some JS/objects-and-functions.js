@@ -12,9 +12,15 @@ var person = {
     'profile id': 245
 };
 
+// parse time
 function add(x, y) {
     return x + y;
 }
+
+// run time
+var subtract = function (x, y) {
+    return x - y;
+};
 
 // print the object
 console.log(person);
@@ -88,18 +94,14 @@ car.stop = function () {
 // ideally all cars will have these methods
 // using inheritance
 
-var car = {
-    name: 'Swift',
-    regNum: 'KA 3CB 2299',
-    owner: 'John Doe',
-    isRunning: true,
-    blowHorn: function () {
-        console.log('honk honk');
-    },
-    isCarRunning: function () {
-        return this.isRunning;
-    },
-    setNewOwner: function (owner) {
-        this.owner = owner;
-    }
+var car = {};
+car.prototype.blowHorn = function blowHorn() {
+    console.log(this.hornSound);
+};
+
+car.prototype.blowHorn.isCarRunning = function isCarRunning() {
+    return this.isRunning;
+};
+car.prototype.blowHorn.setNewOwner = function setNewOwner(owner) {
+    this.owner = owner;
 };
