@@ -4,6 +4,17 @@
 // var obj = new Object();
 // var obj = {}; // better
 
+var lineBreak = (function () {
+    var char = '-';
+    var length = 70;
+    var lineBreak = '';
+    var i;
+    for (i = length - 1; i >= 0; i--) {
+        lineBreak += char;
+    }
+    return lineBreak + '\n';
+}());
+
 var person = {
     name: 'John Doe',
     designation: 'SDE I',
@@ -24,7 +35,9 @@ var subtract = function (x, y) {
 
 // print the object
 console.log(person);
-console.log('\n');
+
+/* --------------------------------------------------------------------------------- */
+console.log(lineBreak);
 
 // refering to properties in an object
 console.log(person.name + ', ' + person.location + '\n');
@@ -57,7 +70,8 @@ arrayOfProperties.forEach(printValues);
 
 // do not use the for..in loop, explained later
 
-console.log('\n');
+/* --------------------------------------------------------------------------------- */
+console.log(lineBreak);
 
 // methods in objects
 var car = {
@@ -77,7 +91,6 @@ var car = {
 };
 
 car.blowHorn();
-console.log('\n');
 
 // try the other methods
 
@@ -91,6 +104,9 @@ car.stop = function () {
 };
 
 // this refers to the object itself
+
+/* --------------------------------------------------------------------------------- */
+console.log(lineBreak);
 
 // ideally all cars will have these methods
 // using inheritance
@@ -116,6 +132,8 @@ swiftCar.hornSound = 'no sound';
 
 swiftCar.blowHorn();
 
+/* --------------------------------------------------------------------------------- */
+console.log(lineBreak);
 
 /*var car = {};
 car.prototype.blowHorn = function blowHorn() {
