@@ -1,3 +1,4 @@
+// Object
 var person = {
     name: 'John Doe',
     designation: 'SDE I',
@@ -5,6 +6,10 @@ var person = {
     currentProject: 'learn-node.js',
     'profile id': 245
 };
+
+function add(x, y) {
+    return x + y;
+}
 
 // creatig empty objects
 // var obj = new Object();
