@@ -74,6 +74,7 @@ car.blowHorn();
 
 // You can add and delete properties at runtime from objects
 car.driver = "Jane Doe";
+delete car.driver;
 
 // you can even add methods at runtime
 car.stop = function () {
