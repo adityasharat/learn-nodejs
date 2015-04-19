@@ -31,14 +31,14 @@ var propName = 'designation';
 console.log(person[propName] + '\n');
 
 // Enumerating all properties of an object
-var arryOfProperties = Object.keys(person);
+var arrayOfProperties = Object.keys(person);
 
 // How would you print the value of all the properties in a object?
 
 // for loop method
 var index;
-for (index = 0; index < arryOfProperties.length; index++) {
-    console.log(person[arryOfProperties[index]]);
+for (index = 0; index < arrayOfProperties.length; index++) {
+    console.log(person[arrayOfProperties[index]]);
 }
 
 console.log('\n');
@@ -47,7 +47,9 @@ console.log('\n');
 function printValues(propName) {
     console.log(person[propName]);
 }
-arryOfProperties.forEach(printValues);
+arrayOfProperties.forEach(printValues);
+
+console.log('\n');
 
 // methods in objects
 var car = {
