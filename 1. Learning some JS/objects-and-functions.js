@@ -145,7 +145,7 @@ function Car(name, owner, regNum, hornSound) {
     this.hornSound = hornSound;
 }
 
-// for method we use the prototype
+// for method we can use the prototype
 Car.prototype.blowHorn = function blowHorn() {
     console.log(this.hornSound);
 };
