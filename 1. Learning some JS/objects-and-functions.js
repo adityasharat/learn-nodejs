@@ -146,13 +146,18 @@ function Car(name, owner, regNum, hornSound) {
 }
 
 // for method we use the prototype
-car.prototype.blowHorn = function blowHorn() {
+Car.prototype.blowHorn = function blowHorn() {
     console.log(this.hornSound);
 };
 
-car.prototype.blowHorn.isCarRunning = function isCarRunning() {
+Car.prototype.blowHorn.isCarRunning = function isCarRunning() {
     return this.isRunning;
 };
-car.prototype.blowHorn.setNewOwner = function setNewOwner(owner) {
+Car.prototype.blowHorn.setNewOwner = function setNewOwner(owner) {
     this.owner = owner;
 };
+
+var newCar = new Car('new car', 'someone else', 'KA 9C 2331', 'honk honk honk');
+
+console.log(newCar.name);
+newCar.blowHorn();
