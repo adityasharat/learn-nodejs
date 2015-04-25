@@ -8,6 +8,7 @@
 2 - 3;
 8 * 2; // multiply in JS is an asterisk
 9 / 3; // divide is forwad slash
+11 % 5 // modulus, returns the remainder: 1 in this case
 
 // assignment operator You've seen this already: it assigns a value to a variable.
 var myVariable = 'Bob';
