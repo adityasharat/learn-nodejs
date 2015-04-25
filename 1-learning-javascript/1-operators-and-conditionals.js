@@ -27,3 +27,18 @@ myVariable === 4; // falses
 var myVariable = 3;
 myVariable !== 3;
 false
+
+/*** Conditionals ***/
+
+// Conditionals are code structures that allow you to test whether an expression returns true or not,
+// and then run different code depending on the result.
+// The most common form of conditional is called if ... else.
+// example:
+
+var iceCream = 'chocolate';
+var str;
+if (iceCream === 'chocolate') {
+    str = 'Yay, I love chocolate ice cream!';
+} else {
+    str = 'Awwww, but chocolate is my favorite...';
+}
