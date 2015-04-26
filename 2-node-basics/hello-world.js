@@ -16,11 +16,20 @@ process.argv.forEach(function (val, index) {
 console.log(argv);
 
 
+
+/*
+
+process.on('beforeExit', function () {
+    console.log('nothing to do, going to die now');
+});
+
 process.on('exit', function (code) {
     setTimeout(function () {
         console.log('This will not run');
     }, 0);
-    console.log('Exiting with code: ', code);
+    console.log('Exiting with code:', code);
 });
 
 process.exit(0);
+
+*/
