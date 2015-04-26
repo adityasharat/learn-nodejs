@@ -17,38 +17,44 @@ console.log(argv);
 
 var readline = require('readline');
 var answers = {};
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+var questions = {
+    '0': {
+        q: 'What is your name?',
+        a: 'name'
+    },
+    '1': {
+        q: 'Where are you currently?',
+        a: 'origin'
+    },
+    '2': {
+        q: 'Where do you wish to go?',
+        a: 'destination'
+    },
+    '3': {
+        q: 'How would you want to travel?',
+        a: 'mode'
+    }
+};
+var index = 0;
+var length = Object.keys(questions).length;
 
-function getReadlineInterface() {
-    return readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-}
-
-function question(question, callback) {
-    var rl = getReadlineInterface().question("What is your name?", function (answer) {
-        answers.name = answer;
+console.log(questions[index].q);
+rl.on('line', function (line) {
+    if (index < length - 1) {
+        answers[questions[index].a] = line;
+        index++;
+        console.log(questions[index].q);
+    } else {
         rl.close();
-    });
-}
-
-
+    }
+});
 
 rl.on('close', function () {
-    getReadlineInterface().question("Where are you currently?", function (answer) {
-        answers.origin = answer;
-        rl.close();
-    });
-});
-
-getReadlineInterface().question("Where do you wish to go?", function (answer) {
-    answers.destination = answer;
-    this.close();
-});
-
-getReadlineInterface().question("How would you want to travel?", function (answer) {
-    answers.mode = answer;
-    this.close();
+    console.log(answers);
 });
 
 /*
