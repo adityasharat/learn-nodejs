@@ -16,20 +16,39 @@ process.argv.forEach(function (val, index) {
 console.log(argv);
 
 var readline = require('readline');
-var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
 var answers = {};
 
-rl.question("What is your name?", function (answer) {
-    answers.name = answer;
-    rl.close();
+function getReadlineInterface() {
+    return readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+}
+
+function question(question, callback) {
+    var rl = getReadlineInterface().question("What is your name?", function (answer) {
+        answers.name = answer;
+        rl.close();
+    });
+}
+
+
+
+rl.on('close', function () {
+    getReadlineInterface().question("Where are you currently?", function (answer) {
+        answers.origin = answer;
+        rl.close();
+    });
 });
 
-rl.question("Where are you currently", function (answer) {
-    answers.origin = answer;
-    rl.close();
+getReadlineInterface().question("Where do you wish to go?", function (answer) {
+    answers.destination = answer;
+    this.close();
+});
+
+getReadlineInterface().question("How would you want to travel?", function (answer) {
+    answers.mode = answer;
+    this.close();
 });
 
 /*
