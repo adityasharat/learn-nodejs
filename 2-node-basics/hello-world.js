@@ -35,7 +35,8 @@ process.exit(0);
 */
 
 /*
-
+// better to use domains
+// https://nodejs.org/docs/latest/api/domain.html
 process.on('uncaughtException', function(err) {
   console.log('Caught exception: ' + err);
 });
