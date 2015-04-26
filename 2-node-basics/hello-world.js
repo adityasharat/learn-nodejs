@@ -15,7 +15,22 @@ process.argv.forEach(function (val, index) {
 
 console.log(argv);
 
+var readline = require('readline');
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+var answers = {};
 
+rl.question("What is your name?", function (answer) {
+    answers.name = answer;
+    rl.close();
+});
+
+rl.question("Where are you currently", function (answer) {
+    answers.origin = answer;
+    rl.close();
+});
 
 /*
 
