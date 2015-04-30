@@ -15,6 +15,7 @@ process.argv.forEach(function (val, index) {
 
 console.log(argv);
 
+/* Reading lines from the console. */
 var readline = require('readline');
 var answers = {};
 var rl = readline.createInterface({
@@ -43,6 +44,9 @@ var index = 0;
 var length = Object.keys(questions).length;
 
 console.log(questions[index].q);
+
+// the line event is emitted when a new line character is read
+// in the input stream
 rl.on('line', function (line) {
     if (index < length - 1) {
         answers[questions[index].a] = line;
@@ -53,6 +57,8 @@ rl.on('line', function (line) {
     }
 });
 
+// the close evnt is emitted when the readline interface
+// is closed.
 rl.on('close', function () {
     console.log(answers);
 });
