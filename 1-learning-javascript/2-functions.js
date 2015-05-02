@@ -31,10 +31,12 @@ multiply(0.5, 3);
 
 // trims ou white space from boths ends of a string
 function trim(string) {
-    var index,
-        indexOfFirstCharacter,
-        indexOfLastCharacter;
+    var index;
+    var indexOfFirstCharacter;
+    var indexOfLastCharacter;
 
+    // get the index of the first non space character
+    // run a loop from the start of the string
     for (index = 0; index < string.length; index++) {
         //compare with ' ' <space>
         if (string.charAt(index) !== ' ') {
@@ -45,6 +47,8 @@ function trim(string) {
         }
     }
 
+    // get the index of the last non space character
+    // run the loop from the end of the string
     for (index = string.length - 1; index >= 0; index--) {
         //compare with ' ' <space>
         if (string.charAt(index) !== ' ') {
@@ -61,5 +65,12 @@ function trim(string) {
         return '';
     }
 
+    // now use both these index and return the substring
+    // that subtring will not contain leading and trailing spaces
+    // '   asd  ';
+    // index of first non space charater 'a' is 3
+    // index of last non space charater 'd' is 5
+    // substring from 3 to 5 + 1 index is
+    // 'asd'
     return string.substring(indexOfFirstCharacter, indexOfLastCharacter + 1);
 }
