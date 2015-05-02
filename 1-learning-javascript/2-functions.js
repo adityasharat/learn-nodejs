@@ -29,6 +29,21 @@ multiply(4, 7);
 multiply(20, 20);
 multiply(0.5, 3);
 
+// returns the index of the charater your are trying to find
+function indexOf(string, charater) {
+    var index = -1;
+    var indexOfCharacter;
+
+    for (index = 0; index < string.length; index++) {
+        if (string.charAt(index) === charater) {
+            indexOfCharacter = index;
+            break;
+        }
+    }
+
+    return indexOfCharacter;
+}
+
 // trims ou white space from boths ends of a string
 function trim(string) {
     var index;
