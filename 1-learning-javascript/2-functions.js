@@ -28,3 +28,38 @@ function multiply(num1, num2) {
 multiply(4, 7);
 multiply(20, 20);
 multiply(0.5, 3);
+
+// trims ou white space from boths ends of a string
+function trim(string) {
+    var index,
+        indexOfFirstCharacter,
+        indexOfLastCharacter;
+
+    for (index = 0; index < string.length; index++) {
+        //compare with ' ' <space>
+        if (string.charAt(index) !== ' ') {
+            indexOfFirstCharacter = index;
+            // exit from the loop when you find the first character
+            // since you found the first character, no need to continue in the loop
+            break;
+        }
+    }
+
+    for (index = string.length - 1; index >= 0; index--) {
+        //compare with ' ' <space>
+        if (string.charAt(index) !== ' ') {
+            indexOfLastCharacter = index;
+            // exit from the loop when you find the first character
+            // since you found the last character, no need to continue in the loop
+            break;
+        }
+    }
+
+    // if the both index were not set, that means that the string contained only
+    // spaces or was an empty string
+    if (indexOfFirstCharacter === undefined && indexOfLastCharacter === undefined) {
+        return '';
+    }
+
+    return string.substring(indexOfFirstCharacter, indexOfLastCharacter + 1);
+}
