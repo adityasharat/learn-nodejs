@@ -34,13 +34,25 @@ function indexOf(string, charater) {
     var index = -1;
     var indexOfCharacter;
 
+    // loop over each character in the string
     for (index = 0; index < string.length; index++) {
+
+        // check if the character at current string is the same
+        // as the character we are searching for
         if (string.charAt(index) === charater) {
+            // if yes, then set the current index to the value of
+            // indexOfCharacter
             indexOfCharacter = index;
+            // break from loop since we have found the character
             break;
         }
     }
 
+    // if we never found the character.
+    // the default value set to indexOfCharacter, ie -1
+    // will be returned, because the if statement
+    // would never have been true, and the value would never have
+    // been over written
     return indexOfCharacter;
 }
 
