@@ -14,3 +14,9 @@ process.argv.forEach(function (val, index) {
 });
 
 console.log(argv);
+
+// name of this file
+console.log(__filename);
+
+// the directory where the currently executing script resides in.
+console.log(__dirname);
