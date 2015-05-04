@@ -57,15 +57,15 @@ rl.on('line', function (line) {
     }
 });
 
-// the close evnt is emitted when the readline interface
-// is closed.
+// the close evnt is emitted when the readline interface is closed.
 rl.on('close', function () {
     console.log(answers);
 });
 
-/*
 
-process.on('beforeExit', function () {
+// events emited by the process
+
+/*process.on('beforeExit', function () {
     console.log('nothing to do, going to die now');
 });
 
@@ -76,9 +76,8 @@ process.on('exit', function (code) {
     console.log('Exiting with code:', code);
 });
 
-process.exit(0);
+process.exit(0);*/
 
-*/
 
 /*
 // better to use domains
@@ -93,6 +92,4 @@ setTimeout(function() {
 
 // Intentionally cause an exception, but don't catch it.
 noSuchFunction();
-console.log('This will not run.');
-
-*/
+console.log('This will not run.');*/
