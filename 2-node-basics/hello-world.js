@@ -1,3 +1,4 @@
+// this is utility function to print to std:out
 console.log('hello world');
 
 // https://nodejs.org/docs/latest/api/process.html#process_process_argv
