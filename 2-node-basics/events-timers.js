@@ -2,19 +2,16 @@
 
 // events emited by the process
 
-/*process.on('beforeExit', function () {
-    console.log('nothing to do, going to die now');
+process.on('beforeExit', function () {
+    console.log('nothing to do, going to die now.');
 });
 
 process.on('exit', function (code) {
     setTimeout(function () {
-        console.log('This will not run');
+        console.log('This will not run!');
     }, 0);
     console.log('Exiting with code:', code);
 });
-
-process.exit(0);*/
-
 
 /*
 // better to use domains
@@ -30,6 +27,7 @@ setTimeout(function() {
 // Intentionally cause an exception, but don't catch it.
 noSuchFunction();
 console.log('This will not run.');*/
+
 
 /* Reading lines from the console. */
 var readline = require('readline');
@@ -77,3 +75,5 @@ rl.on('line', function (line) {
 rl.on('close', function () {
     console.log(answers);
 });
+
+// process.exit(0);
