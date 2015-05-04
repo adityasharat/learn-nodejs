@@ -2,9 +2,9 @@
 
 // events emited by the process
 
-process.on('beforeExit', function () {
+/*process.once('beforeExit', function () {
     console.log('nothing to do, going to die now.');
-});
+});*/
 
 process.on('exit', function (code) {
     setTimeout(function () {
@@ -62,8 +62,8 @@ console.log(questions[index].q);
 // the line event is emitted when a new line character is read
 // in the input stream
 rl.on('line', function (line) {
+    answers[questions[index].a] = line;
     if (index < length - 1) {
-        answers[questions[index].a] = line;
         index++;
         console.log(questions[index].q);
     } else {
