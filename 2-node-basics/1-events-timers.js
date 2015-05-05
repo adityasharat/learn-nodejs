@@ -13,20 +13,20 @@ process.on('exit', function (code) {
     console.log('Exiting with code:', code);
 });
 
-/*
+
 // better to use domains
 // https://nodejs.org/docs/latest/api/domain.html
-process.on('uncaughtException', function(err) {
-  console.log('Caught exception: ' + err);
+process.on('uncaughtException', function (err) {
+    console.log('Caught exception: ' + err);
 });
 
-setTimeout(function() {
-  console.log('This will still run.');
-}, 500);
+//setTimeout(function() {
+//  console.log('This will still run.');
+//}, 500);
 
 // Intentionally cause an exception, but don't catch it.
-noSuchFunction();
-console.log('This will not run.');*/
+//noSuchFunction();
+//console.log('This will not run.');
 
 
 /* Reading lines from the console. */
