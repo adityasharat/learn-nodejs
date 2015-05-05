@@ -1,4 +1,4 @@
-/*** Events and timers ***/
+/*** Events ***/
 
 // events emited by the process
 
