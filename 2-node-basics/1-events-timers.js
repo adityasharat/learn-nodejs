@@ -2,9 +2,9 @@
 
 // events emited by the process
 
-/*process.once('beforeExit', function () {
-    console.log('nothing to do, going to die now.');
-});*/
+process.once('beforeExit', function () {
+    console.log('Nothing to do, going to die now.');
+});
 
 process.on('exit', function (code) {
     setTimeout(function () {
