@@ -14,8 +14,9 @@ setTimeout(function () {
     clearInterval(handle);
 }, 5500);
 
+/* Creating EventEmitters */
 var util = require('util');
-
+/*
 function Race(runners, distance, checkPointInterval) {
     var _this = this;
     var handle;
@@ -83,4 +84,4 @@ race.on('finishLineCrossed', function (runner) {
     console.log(runner.name + ' has finished the race.');
 });
 
-race.start();
+race.start();*/
