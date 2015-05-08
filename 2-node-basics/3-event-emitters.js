@@ -1,6 +1,6 @@
 var EventEmitter = require('events').EventEmitter;
 
-/*var phone = new EventEmitter();
+var phone = new EventEmitter();
 
 phone.on('incomingCall', function (contact) {
     console.log(contact + ' calling.');
@@ -12,7 +12,7 @@ var handle = setInterval(function () {
 
 setTimeout(function () {
     clearInterval(handle);
-}, 5500);*/
+}, 5500);
 
 var util = require('util');
 
