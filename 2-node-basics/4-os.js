@@ -1,5 +1,6 @@
 /*** The operating system ***/
 
+// https: //nodejs.org/docs/v0.12.2/api/os.html
 var os = require('os');
 
 // default temp files location
