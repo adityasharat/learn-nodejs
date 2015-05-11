@@ -2,7 +2,7 @@
 var fs = require('fs');
 var filename = 'data/cuboid-0.json';
 var options = {
-    //encoding: 'utf8'
+    encoding: 'utf8'
 };
 
 fs.readFile(filename, options, function (err, data) {
@@ -14,14 +14,14 @@ fs.readFile(filename, options, function (err, data) {
     }
 
     console.log(data);
-    //var cuboid0 = JSON.parse(data);
-    //console.log(cuboid0);
+    cuboid0 = JSON.parse(data);
+    console.log(cuboid0);
 
     cuboid0.length *= 2;
     cuboid0.width *= 2;
     cuboid0.height *= 2;
 
-    //newCuboid0 = JSON.stringify(cuboid0);
+    newCuboid0 = JSON.stringify(cuboid0);
 
     fs.writeFile(filename, newCuboid0, function (err) {
         if (err) {
@@ -29,4 +29,9 @@ fs.readFile(filename, options, function (err, data) {
         }
         console.log('File updated!');
     });
+});
+
+fs.watchFile(filename, function (curr, prev) {
+    console.log('the current mtime is: ' + curr.mtime);
+    console.log('the previous mtime was: ' + prev.mtime);
 });
