@@ -29,5 +29,4 @@ fs.readFile(filename, options, function (err, data) {
         }
         console.log('File updated!');
     });
-
 });
