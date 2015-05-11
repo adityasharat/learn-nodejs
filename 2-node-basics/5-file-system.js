@@ -35,3 +35,9 @@ fs.watchFile(filename, function (curr, prev) {
     console.log('the current mtime is: ' + curr.mtime);
     console.log('the previous mtime was: ' + prev.mtime);
 });
+
+// https://nodejs.org/docs/v0.12.2/api/fs.html#fs_fs_exists_path_callback
+// fs.exists(path, callback);
+
+// https://nodejs.org/docs/v0.12.2/api/fs.html#fs_class_fs_stats
+// fs.stat(path, callback)
