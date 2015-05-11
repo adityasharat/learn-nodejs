@@ -6,10 +6,28 @@ var options = {
 };
 
 fs.readFile(filename, options, function (err, data) {
+    var cuboid0;
+    var newCuboid0;
+
     if (err) {
         throw err;
     }
+
     console.log(data);
-    /*var cuboid0 = JSON.parse(data);
-    console.log(cuboid0);*/
+    //var cuboid0 = JSON.parse(data);
+    //console.log(cuboid0);
+
+    cuboid0.length *= 2;
+    cuboid0.width *= 2;
+    cuboid0.height *= 2;
+
+    //newCuboid0 = JSON.stringify(cuboid0);
+
+    fs.writeFile(filename, newCuboid0, function (err) {
+        if (err) {
+            throw err;
+        }
+        console.log('File updated!');
+    });
+
 });
