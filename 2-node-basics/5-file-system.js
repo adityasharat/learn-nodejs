@@ -37,7 +37,21 @@ fs.watchFile(filename, function (curr, prev) {
 });
 
 // https://nodejs.org/docs/v0.12.2/api/fs.html#fs_fs_exists_path_callback
-// fs.exists(path, callback);
+fs.exists(filename, function (exists) {
+    if (exists) {
+        console.log(filename + ' exists');
+    } else {
+        console.log(filename + ' does not exists');
+    }
+});
 
 // https://nodejs.org/docs/v0.12.2/api/fs.html#fs_class_fs_stats
-// fs.stat(path, callback)
+fs.stat(filename, function (err, stats) {
+    if (err) {
+        throw err;
+    }
+    if (stats.isFile()) {
+        console.log(filename + ' is a file.');
+    }
+
+});
